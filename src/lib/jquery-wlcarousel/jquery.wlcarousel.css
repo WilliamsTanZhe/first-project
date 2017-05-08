@@ -1,0 +1,18 @@
+
+.wlcarousel{position:relative;/*margin:0 auto;*/width:810px;height:320px;overflow:hidden;}
+.wlcarousel ul{position:relative;left:0;top:0;}
+.wlcarousel li{/*height:320px;*/overflow:hidden;}
+/*淡入淡出样式*/
+.wlcarousel .fade{position: absolute;top:0;left:0;width:810px;overflow:hidden;}
+
+/*水平滚动样式 或 无缝滚动    添加浮动*/
+.wlcarousel .horizontalli{float:left;}
+
+/*小图显示*/
+.wlcarousel .smallpic{position:absolute;margin:0 auto;margin-top:20px;overflow:hidden;z-index: 4;width:810px;height: 100px;}
+.wlcarousel .smallpic li{float:left;padding-left:10px;}
+.wlcarousel .smallpic img{width:190px;}
+
+.wlcarousel .prev,.next{position: absolute;width:30px;height:50px;line-height:50px;background-color:#f60;color:#fff;text-align:center;z-index: 2;cursor:pointer;}
+.wlcarousel .prev{left:0;top:0;bottom:0;margin:auto 0;}
+.wlcarousel .next{right:0;top:50%;margin-top:-25px;}
