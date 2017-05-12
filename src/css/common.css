@@ -74,12 +74,12 @@ header .header .container {
 }
 
 header .header .container .top_l {
-  width: 160px;
+  width: 300px;
   float: left;
 }
 
 header .header .container .top_l ul {
-  width: 160px;
+  width: 300px;
 }
 
 header .header .container .top_l ul li {
@@ -96,12 +96,12 @@ header .header .container .top_l ul li a {
 
 header .header .container .top_l ul .register {
   padding-right: 14px;
-  border-right: 1px solid #ccc;
 }
 
 header .header .container .top_l ul .login {
+  border-left: 1px solid #ccc;
   margin-left: 14px;
-  margin-right: 12px;
+  padding: 0 12px 0 14px;
 }
 
 header .header .container .top_r {
@@ -172,23 +172,22 @@ header .header .container .top_r .follow_us .foolow_uslinks ul li p:hover {
 
 header .header .container .top_r .cart {
   padding-top: 4px;
+  display: block;
   width: 134px;
   height: 31px;
   margin-left: 26px;
-  cursor: pointer;
   box-sizing: border-box;
   border: 1px solid #F4F4F4;
   position: relative;
   z-index: 6;
-}
-
-header .header .container .top_r .cart div {
   float: left;
 }
 
 header .header .container .top_r .cart .cart_l {
   position: relative;
+  float: left;
   padding-left: 46px;
+  cursor: pointer;
   border-right: 1px solid white;
 }
 
@@ -210,6 +209,8 @@ header .header .container .top_r .cart .cart_r {
   border-left: 1px solid #afafaf;
   height: 18px;
   width: 18px;
+  float: left;
+  cursor: pointer;
 }
 
 header .header .container .top_r .cart .cart_car {
@@ -217,18 +218,105 @@ header .header .container .top_r .cart .cart_car {
   z-index: 4;
   top: 29px;
   right: -1px;
-  width: 275px;
+  width: 316px;
   min-height: 78px;
   max-height: 440px;
   overflow: hidden;
   background-color: #fff;
   border: 1px solid #ccc;
-  text-align: center;
   display: none;
 }
 
-header .header .container .top_r .cart .cart_car p {
+header .header .container .top_r .cart .cart_car .empty {
+  text-align: center;
   line-height: 78px;
+}
+
+header .header .container .top_r .cart .cart_car .cart_out {
+  width: 276px;
+  margin-left: 20px;
+  min-height: 78px;
+  max-height: 440px;
+}
+
+header .header .container .top_r .cart .cart_car .cart_out .car_t {
+  width: 276px;
+  height: 28px;
+  line-height: 28px;
+  text-indent: 1em;
+  text-weight: bold;
+}
+
+header .header .container .top_r .cart .cart_car .cart_out .car_show {
+  min-height: 78px;
+  max-height: 236px;
+  overflow: hidden;
+}
+
+header .header .container .top_r .cart .cart_car .cart_out .car_show .commodity .comImg {
+  width: 50px;
+  height: 60px;
+}
+
+header .header .container .top_r .cart .cart_car .cart_out .car_show .commodity div {
+  height: 78px;
+  width: 276px;
+  border-bottom: 1px solid #ddd;
+  position: relative;
+}
+
+header .header .container .top_r .cart .cart_car .cart_out .car_show .commodity div a {
+  float: left;
+  height: 78px;
+  width: 276px;
+}
+
+header .header .container .top_r .cart .cart_car .cart_out .car_show .commodity div a img {
+  float: left;
+  width: 50px;
+  height: 60px;
+}
+
+header .header .container .top_r .cart .cart_car .cart_out .car_show .commodity div a :hover {
+  color: #8E0C3A;
+}
+
+header .header .container .top_r .cart .cart_car .cart_out .car_show .commodity div span {
+  float: right;
+  font-size: 22px;
+  position: absolute;
+  right: 0;
+  top: 35%;
+  cursor: pointer;
+}
+
+header .header .container .top_r .cart .cart_car .cart_out .car_b {
+  width: 276px;
+  height: 44px;
+  color: #6C6C6C;
+}
+
+header .header .container .top_r .cart .cart_car .cart_out .car_b .to_l {
+  line-height: 44px;
+  float: left;
+  width: 184px;
+}
+
+header .header .container .top_r .cart .cart_car .cart_out .car_b .to_r {
+  float: right;
+  width: 92px;
+}
+
+header .header .container .top_r .cart .cart_car .cart_out .car_b .to_r .settlement {
+  display: block;
+  width: 82px;
+  height: 20px;
+  margin-top: 12px;
+  line-height: 20px;
+  text-align: center;
+  float: right;
+  background-color: #99183B;
+  color: #fff;
 }
 
 header .header .container .top_r .cart:hover {

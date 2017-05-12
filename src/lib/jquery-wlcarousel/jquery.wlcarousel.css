@@ -1,6 +1,6 @@
 
 .wlcarousel{position:relative;/*margin:0 auto;*/width:810px;height:320px;overflow:hidden;}
-.wlcarousel ul{position:relative;left:0;top:0;}
+.wlcarousel ul{position:relative;left:0;top:0;z-index: 1;}
 .wlcarousel li{/*height:320px;*/overflow:hidden;}
 /*淡入淡出样式*/
 .wlcarousel .fade{position: absolute;top:0;left:0;width:810px;overflow:hidden;}

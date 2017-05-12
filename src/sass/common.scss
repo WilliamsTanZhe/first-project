@@ -1,3 +1,6 @@
+
+$e:#8E0C3A;
+
 *{margin:0;padding:0;}
 .container{margin:0 auto;width: 960px;}
 .clearfix:after {
@@ -24,10 +27,10 @@ header{
 			color:#7A7A7A;
 			font-size:12px;
 			.top_l{
-				width: 160px;			
+				width: 300px;			
 				float:left;
 				ul{
-					width: 160px;
+					width: 300px;
 					li{
 						float:left;
 						display:inline-block;
@@ -40,13 +43,14 @@ header{
 					}
 					.register{
 						padding-right:14px;
-						border-right:1px solid #ccc;
 					}
 					.login{
+						border-left:1px solid #ccc;
 						margin-left:14px;
-						margin-right:12px;
+						padding: 0 12px 0 14px;
+						
 					}
-					}
+				}
 			}
 			.top_r{
 				width: 384px;
@@ -105,21 +109,21 @@ header{
 
 				.cart{
 					padding-top:4px;
+					display:block;
 					width:134px;
 					height: 31px;					
 					margin-left:26px;
-					cursor: pointer;
+					
 					box-sizing:border-box;
 					border:1px solid #F4F4F4;
 					position:relative;
 					z-index:6;
-					div{
-						float:left;
-					}
+					float:left;
 					.cart_l{
 						position:relative;
-
+						float:left;
 						padding-left:46px;
+						cursor: pointer;
 						em{
 							display: inline-block;
 						    width: 20px;
@@ -139,30 +143,106 @@ header{
 						border-left: 1px solid #afafaf;
 						height: 18px;
 						width:18px;
+						float:left;
+						cursor: pointer;
 					}
 					.cart_car{
 						position: absolute;
 						z-index:4;
 					    top: 29px;
 					    right: -1px;
-					    width: 275px;
+					    width: 316px;
 					    min-height:78px;
 					    max-height:440px;
 					    overflow:hidden;
 					    background-color:#fff;
 					    border:1px solid #ccc;
-					    text-align:center;
 					    display:none;
-					    p{
+					    .empty{text-align:center;
 					    	line-height:78px;
+					    }
+					    .cart_out{
+					    	width:276px;
+					    	margin-left:20px;
+					    	min-height:78px;
+					    	max-height:440px;
+							.car_t{
+								width:276px;
+								height:28px;
+								line-height:28px;
+								text-indent:1em;
+								text-weight:bold;
+							}
+							.car_show{
+								min-height:78px;
+					    		max-height:236px;
+					    		overflow:hidden;
+					    		.commodity{
+									.comImg{
+										width:50px;
+										height:60px;
+									}
+									div{
+										height:78px;
+										width:276px;
+										border-bottom:1px solid #ddd;
+										position:relative;
+										a{float:left;
+											img{float:left;
+												width:50px;
+												height:60px;
+											}
+											height:78px;
+											width:276px;
+											:hover{
+												color:$e;
+											}
+										}
+										span{
+											float:right;
+											font-size:22px;
+											position:absolute;
+											right:0;
+											top:35%;
+											cursor:pointer;
+										}
+									}
+					    		}
+							}
+							.car_b{
+								width:276px;
+								height:44px;
+								color:#6C6C6C;
+								// border-top:1px solid #ccc;
+								.to_l{
+									line-height:44px;
+									float:left;
+									width:184px;
+								}
+								.to_r{
+									float:right;
+									width:92px;
+									.settlement{
+										display:block;
+										width:82px;
+										height: 20px;
+										margin-top:12px;
+										line-height:20px;
+										text-align:center;
+										float:right;
+										background-color:#99183B;
+										color:#fff;
+									}
+								}	
+							}
 					    }
 					}
 				}
 				.cart:hover{
-						background-color:#fff;
-						border:1px solid #ccc;
-						border-bottom-color:#fff;
-						height: 32px;
+					background-color:#fff;
+					border:1px solid #ccc;
+					border-bottom-color:#fff;
+					height: 32px;
 				}
 			}
 		}		

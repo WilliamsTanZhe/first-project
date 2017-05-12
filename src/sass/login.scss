@@ -1,0 +1,75 @@
+/*引入公共样式 包含头部 导航 尾部*/ 
+@import 'common.scss';
+
+
+main{
+	width:100%;
+	.container{
+		padding-top:20px;
+		.login_main{
+			width: 960px;
+			height: 489px;
+			padding-top:28px;
+			background:url(imgs/main.jpg);
+			.login_logo{
+				width:352px;
+				height: 123px;
+				margin-left:66px;
+				background:url(imgs/login_bg.png);
+			}			
+			.input{
+				margin:22px 0 0 106px;
+				.input_t {
+					input{
+						width: 202px;
+						height: 18px;
+						border:1px solid #ccc;
+						outline:none;
+						padding: 0 0 0 2px;
+					}
+					div{
+						width: 856px;
+						height: 40px;
+						.active{
+							border:1px solid $e;
+						}
+					}					
+				}				
+				.input_b{
+					margin-left:70px;
+					div{
+						width: 204px;
+					}
+					.input_in{
+						height: 20px;
+						margin-bottom:22px;
+						.float_l{
+							float:left;
+						}
+						.float_r{
+							float:right;
+						}
+					}
+					.submit{
+						.submit_btn{
+							width: 204px;
+							height: 30px;
+							background-color:#8E0C3A;
+							border:0;
+							outline:none;
+							color:#fff;
+							cursor:pointer;
+						}
+					}
+					.output{
+						width:204px;
+						height: 28px;
+						line-height:28px;
+						
+						color:$e;
+					}
+				}
+			}
+		}
+	}
+}

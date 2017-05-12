@@ -1,0 +1,266 @@
+/*引入公共样式 包含头部 导航 尾部*/ 
+@import 'common.scss';
+
+
+main{
+	width:100%;
+	.fix_top{
+		position:fixed;
+		top:0;
+		z-index:1000;
+		display:none;
+		width:100%;
+		height:60px;
+		border-top:1px solid #ddd;
+		border-bottom:1px solid #ddd;
+		background-color:#fff;
+		.container{
+			height:60px;
+			padding:0;
+			.fix_l{
+				width:255px;
+				height:60px;
+				float:left;
+				img{
+					height:35px;
+					width:200px;
+					margin-top:12px;
+				}
+			}
+			.fix_i{
+				width:571px;
+				padding-top:14px;
+				float:left;
+				.top_search{
+					width:567px;
+					height:32px;
+					border:2px solid $e;
+					input{
+						width:537px;
+						height:30px;
+						outline:none;
+						border:0;
+						font-size: 14px;
+						line-height:30px;
+						float:left;
+					}
+					a{
+						width:30px;
+						float:left;
+						display:block;
+						margin-top:4px;
+					}
+				}
+			}
+			.fix_r{
+				width:134px;
+				height:60px;
+				float:left;
+				.cart{
+					padding-top:4px;
+					display:block;
+					width:134px;
+					height: 46px;					
+					margin:14px 0 0 6px;
+					box-sizing:border-box;
+					border:1px solid #F4F4F4;
+					position:relative;
+					z-index:6;
+					float:left;
+					.cart_l{
+						position:relative;
+						float:left;
+						padding-left:46px;
+						cursor: pointer;
+						em{
+							display: inline-block;
+						    width: 20px;
+						    height: 16px;
+						    background: url(imgs/headico01.png) 0 -29px no-repeat;
+						    left: 20px;
+						    position:absolute;
+						    left:23px;
+						    // top:4px;
+						}
+						.car_num{
+							color:#9A143B;
+						}
+						border-right: 1px solid rgb(255, 255, 255);
+					}					
+					.cart_r{
+						border-left: 1px solid #afafaf;
+						height: 18px;
+						width:18px;
+						float:left;
+						cursor: pointer;
+					}
+					.cart_car{
+						position: absolute;
+						z-index:4;
+					    top: 45px;
+					    right: -1px;
+					    width: 316px;
+					    min-height:78px;
+					    max-height:440px;
+					    overflow:hidden;
+					    background-color:#fff;
+					    border:1px solid #ccc;
+					    display:none;
+					    .empty{text-align:center;
+					    	line-height:78px;
+					    }
+					    .cart_out{
+					    	width:276px;
+					    	margin-left:20px;
+					    	min-height:78px;
+					    	max-height:440px;
+							.car_t{
+								width:276px;
+								height:28px;
+								line-height:28px;
+								text-indent:1em;
+								text-weight:bold;
+							}
+							.car_show{
+								min-height:78px;
+					    		max-height:236px;
+					    		overflow:hidden;
+					    		.commodity{
+									div{
+										height:78px;
+										width:276px;
+										border-bottom:1px solid #ddd;
+										position:relative;
+										img,a{
+											float:left;
+										}
+										img{
+											display: inline-block;
+											width:50px;
+											height:60px;
+										}
+										a{
+											height:78px;
+											width:276px;
+											:hover{
+												color:$e;
+											}
+										}
+										span{
+											float:right;
+											font-size:22px;
+											position:absolute;
+											right:0;
+											top:35%;
+											cursor:pointer;
+										}
+									}
+					    		}
+							}
+							.car_b{
+								width:276px;
+								height:44px;
+								color:#6C6C6C;
+								// border-top:1px solid #ccc;
+								.to_l{
+									line-height:44px;
+									float:left;
+									width:184px;
+								}
+								.to_r{
+									float:right;
+									width:92px;
+									.settlement{
+										display:block;
+										width:82px;
+										height: 20px;
+										margin-top:12px;
+										line-height:20px;
+										text-align:center;
+										float:right;
+										background-color:#99183B;
+										color:#fff;
+									}
+								}	
+							}
+					    }
+					}
+				}
+				.cart:hover{
+					background-color:#fff;
+					border:1px solid #ccc;
+					border-bottom-color:#fff;
+					height: 45px;
+				}
+			}
+		}
+	}
+	.container{
+		padding-top:20px;
+		.con_l{
+			line-height:22px;
+			width:192px;			
+			float:left;
+			.bags_box{
+				
+				.bags_main{
+					>li>ul>a{
+						font-weight:bold;
+					}
+					>li>ul>ul{
+						text-indent: 2em;
+						display:none;
+					}
+				}
+			}
+			.gender_box,.price_box{
+				img{
+					padding:4px 0;
+					border-bottom: 1px solid #ddd;
+				}
+				a{
+					text-indent: 2em;
+					display:block;
+				}
+			}
+			a:hover{
+				color:$e;
+			}
+		}
+		.con_r{
+			overflow: hidden;
+			ul{
+				li{
+					width:210px;
+					height: 337px;
+					margin:5px 15px;
+					float:left;
+					line-height:20px;
+					p{
+						font-weight:bold;
+					}
+					span{
+						color:$e;
+					}
+					.product_p{
+						height:40px;
+						.prop_l{
+							float:left;
+							width:70px;
+						}
+						.prop_r{
+							float:right;
+							width:140px;
+							a{
+								width:120px;
+								height: 37px;
+								display:block;
+								background:url(../img/pic_add_shopping.gif) -10px 0  no-repeat;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

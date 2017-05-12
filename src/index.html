@@ -12,8 +12,9 @@
 			<div class="container">
 				<div class="top_l">
 					<ul>
-						<li class="register"><a href="">注册</a></li>
-						<li class="login"><a href="">登录</a></li>
+						<li class="register"><a href="html/register.html">注册</a></li>
+						<li class="out" style="display: none"><a href="">退出</a></li>
+						<li class="login"><a href="html/login.html">登录</a></li>						
 						<li class="order_s"><a href="">订单查询</a></li>
 					</ul>
 				</div>
@@ -28,7 +29,7 @@
 							</ul>
 						</div>
 					</div>
-					<div class="cart">
+					<div href="" class="cart">
 						<div class="cart_l">
 							<em></em>
 							购物袋 ( <span class="car_num">0</span> ) 
@@ -37,7 +38,22 @@
 							<span > ▼ </span>
 						</div>
 						<div class="cart_car">
-							<p>您的购物袋是空的</p>
+							<p class="empty" style="display: none">您的购物袋是空的</p>
+							<div class="cart_out" >
+								<div class="car_t"><strong>最新加入的商品</strong></div>
+								<div class="car_show">
+									
+								</div>
+								<div class="car_b">
+									<div class="to_l">
+										<span>商品总计 ： ￥  </span>
+										<span class="totalprice"></span>
+									</div>
+									<div class="to_r">
+										<a href="html/car.html" class="settlement">现在就结算</a>
+									</div>
+								</div>
+							</div>
 						</div>							
 					</div>
 													
@@ -100,16 +116,16 @@
 					<div class="offer_main clearfix">
 						<div class="ofm_l1 clearfix">
 							<a href="" class="welfare" target="_blank">
-								<img src="img/offer1.jpg" alt="">
+								<img data-original="img/offer1.jpg" alt="">
 							</a>
-							<a href="" class="glasses" target="_blank"><img src="img/offer3.jpg" alt=""></a>
+							<a href="" class="glasses" target="_blank"><img data-original="img/offer3.jpg" alt=""></a>
 						</div>
 						<div class="ofm_l2 clearfix">
-							<a href="" target="_blank"><img src="img/offer2.jpg" alt=""></a>
+							<a href="" target="_blank"><img data-original="img/offer2.jpg" alt=""></a>
 						</div>
 						<div class="ofm_l3 clearfix">
-							<a href="" target="_blank"><img src="img/offer4.jpg" alt=""></a>
-							<a href="" target="_blank"><img src="img/offer5.jpg" alt=""></a>
+							<a href="" target="_blank"><img data-original="img/offer4.jpg" alt=""></a>
+							<a href="" target="_blank"><img data-original="img/offer5.jpg" alt=""></a>
 						</div>
 					</div>					
 				</section>
@@ -127,16 +143,16 @@
 					<div class="him_main clearfix">
 						<div class="ofm_l1 clearfix">
 							<a href="" class="welfare" target="_blank">
-								<img src="img/him1.jpg" alt="">
+								<img data-original="img/him1.jpg" alt="">
 							</a>
-							<a href="" class="glasses" target="_blank"><img src="img/him3.jpg" alt=""></a>
+							<a href="" class="glasses" target="_blank"><img data-original="img/him3.jpg" alt=""></a>
 						</div>
 						<div class="ofm_l2 clearfix">
-							<a href="" target="_blank"><img src="img/him2.jpg" alt=""></a>
+							<a href="" target="_blank"><img data-original="img/him2.jpg" alt=""></a>
 						</div>
 						<div class="ofm_l3 clearfix">
-							<a href="" target="_blank"><img src="img/him4.jpg" alt=""></a>
-							<a href="" target="_blank"><img src="img/him5.jpg" alt=""></a>
+							<a href="" target="_blank"><img data-original="img/him4.jpg" alt=""></a>
+							<a href="" target="_blank"><img data-original="img/him5.jpg" alt=""></a>
 						</div>
 					</div>					
 				</section>
@@ -154,16 +170,16 @@
 					<div class="her_main clearfix">
 						<div class="ofm_l1 clearfix">
 							<a href="" class="welfare" target="_blank">
-								<img src="img/her1.jpg" alt="">
+								<img data-original="img/her1.jpg" alt="">
 							</a>
-							<a href="" class="glasses" target="_blank"><img src="img/her3.jpg" alt=""></a>
+							<a href="" class="glasses" target="_blank"><img data-original="img/her3.jpg" alt=""></a>
 						</div>
 						<div class="ofm_l2 clearfix">
-							<a href="" target="_blank"><img src="img/her2.jpg" alt=""></a>
+							<a href="" target="_blank"><img data-original="img/her2.jpg" alt=""></a>
 						</div>
 						<div class="ofm_l3 clearfix">
-							<a href="" target="_blank"><img src="img/her4.jpg" alt=""></a>
-							<a href="" target="_blank"><img src="img/her5.jpg" alt=""></a>
+							<a href="" target="_blank"><img data-original="img/her4.jpg" alt=""></a>
+							<a href="" target="_blank"><img data-original="img/her5.jpg" alt=""></a>
 						</div>
 					</div>					
 				</section>
@@ -179,84 +195,84 @@
 						</p>
 					</div>
 					<div class="sold_main clearfix">
-						<ul>
-							<li><a><img src="img/slod (1).jpg" alt="">
+						<ul class="sold_go">
+							<li><a><img data-original="img/slod (1).jpg" alt="">
 									<p>Versace<br>范思哲</p>
 									</a><p>已加入购物袋</p>
 							</li>
-							<li><a><img src="img/slod (2).jpg" alt="">
+							<li><a><img data-original="img/slod (2).jpg" alt="">
 									<p>Versace<br>范思哲</p>
 									</a><p>已加入购物袋</p>
 							</li>
-							<li><a><img src="img/slod (3).jpg" alt="">
+							<li><a><img data-original="img/slod (3).jpg" alt="">
 									<p>Versace<br>范思哲</p>
 									</a><p>已加入购物袋</p>
 							</li>
-							<li><a><img src="img/slod (4).jpg" alt="">
+							<li><a><img data-original="img/slod (4).jpg" alt="">
 									<p>Versace<br>范思哲</p>
 									</a><p>已加入购物袋</p>
 							</li>
-							<li><a><img src="img/slod (5).jpg" alt="">
+							<li><a><img data-original="img/slod (5).jpg" alt="">
 									<p>Versace<br>范思哲</p>
 									</a><p>已加入购物袋</p>
 							</li>
-							<li><a><img src="img/slod (6).jpg" alt="">
+							<li><a><img data-original="img/slod (6).jpg" alt="">
 									<p>Versace<br>范思哲</p>
 									</a><p>已加入购物袋</p>
 							</li>
-							<li><a><img src="img/slod (7).jpg" alt="">
+							<li><a><img data-original="img/slod (7).jpg" alt="">
 									<p>Versace<br>范思哲</p>
 									</a><p>已加入购物袋</p>
 							</li>
-							<li><a><img src="img/slod (8).jpg" alt="">
+							<li><a><img data-original="img/slod (8).jpg" alt="">
 									<p>Versace<br>范思哲</p>
 									</a><p>已加入购物袋</p>
 							</li>
-							<li><a><img src="img/slod (9).jpg" alt="">
+							<li><a><img data-original="img/slod (9).jpg" alt="">
 									<p>Versace<br>范思哲</p>
 									</a><p>已加入购物袋</p>
 							</li>
-							<li><a><img src="img/slod (10).jpg" alt="">
+							<li><a><img data-original="img/slod (10).jpg" alt="">
 									<p>Versace<br>范思哲</p>
 									</a><p>已加入购物袋</p>
 							</li>
-							<li><a><img src="img/slod (11).jpg" alt="">
+							<li><a><img data-original="img/slod (11).jpg" alt="">
 									<p>Versace<br>范思哲</p>
 									</a><p>已加入购物袋</p>
 							</li>
-							<li><a><img src="img/slod (12).jpg" alt="">
+							<li><a><img data-original="img/slod (12).jpg" alt="">
 									<p>Versace<br>范思哲</p>
 									</a><p>已加入购物袋</p>
 							</li>
-							<li><a><img src="img/slod (13).jpg" alt="">
+							<li><a><img data-original="img/slod (13).jpg" alt="">
 									<p>Versace<br>范思哲</p>
 									</a><p>已加入购物袋</p>
 							</li>
-							<li><a><img src="img/slod (14).jpg" alt="">
+							<li><a><img data-original="img/slod (14).jpg" alt="">
 									<p>Versace<br>范思哲</p>
 									</a><p>已加入购物袋</p>
 							</li>
-							<li><a><img src="img/slod (15).jpg" alt="">
+							<li><a><img data-original="img/slod (15).jpg" alt="">
 									<p>Versace<br>范思哲</p>
 									</a><p>已加入购物袋</p>
 							</li>
-							<li><a><img src="img/slod (16).jpg" alt="">
+							<li><a><img data-original="img/slod (16).jpg" alt="">
 									<p>Versace<br>范思哲</p>
 									</a><p>已加入购物袋</p>
 							</li>
-							<li><a><img src="img/slod (17).jpg" alt="">
+							<li><a><img data-original="img/slod (17).jpg" alt="">
 									<p>Versace<br>范思哲</p>
 									</a><p>已加入购物袋</p>
 							</li>
-							<li><a><img src="img/slod (18).jpg" alt="">
+							<li><a><img data-original="img/slod (18).jpg" alt="">
 									<p>Versace<br>范思哲</p>
 									</a><p>已加入购物袋</p>
 							</li>
-							<li><a><img src="img/slod (19).jpg" alt="">
+							<li><a><img data-original="img/slod (19).jpg" alt="">
 									<p>Versace<br>范思哲</p>
 									</a><p>已加入购物袋</p>
 							</li>
-							<li><a><img src="img/slod (20).jpg" alt="">
+							<li><a><img data-original="img/slod (20).jpg" alt="">
 									<p>Versace<br>范思哲</p>
 									</a><p>已加入购物袋</p>
 							</li>
@@ -277,20 +293,20 @@
 					<div class="trends_main clearfix">
 						<div class="ofm_l1 clearfix">
 							<a href="" class="welfare" target="_blank">
-								<img src="img/m (3).jpg" alt="">
+								<img data-original="img/m (3).jpg" alt="">
 								<p>音乐节Day & Night </p>
 							</a>
 							
 						</div>
 						<div class="ofm_l2 clearfix">
 							<a href="" target="_blank">
-								<img src="img/m (2).jpg" alt="">
+								<img data-original="img/m (2).jpg" alt="">
 								<p>街头涂鸦穿上身</p>
 							</a>
 						</div>
 						<div class="ofm_l3 clearfix">
 							<a href="" target="_blank">
-								<img src="img/m (1).jpg" alt="">
+								<img data-original="img/m (1).jpg" alt="">
 								<p>一字拖也很正经</p>
 							</a>						
 						</div>
@@ -310,9 +326,9 @@
 					<div class="download_main clearfix">
 						<aside class="ofm_l1 clearfix">
 							<a href="" class="welfare" target="_blank">
-								<img src="img/nb01.jpg" alt="">		</a>							
+								<img data-original="img/nb01.jpg" alt="">		</a>							
 						</aside>
-						<aside class="ofm_l2 clearfix">					<img src="img/nb02.jpg" alt="">
+						<aside class="ofm_l2 clearfix">					<img data-original="img/nb02.jpg" alt="">
 							<div class="dingyu">
 								<div class="email">
 									<em class="email_l">
@@ -328,7 +344,7 @@
 						</aside>
 						<aside class="ofm_l3 clearfix">
 							<a href="" target="_blank">
-								<img src="img/nb03.jpg" alt="">
+								<img data-original="img/nb03.jpg" alt="">
 								
 							</a>						
 						</aside>

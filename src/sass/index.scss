@@ -125,19 +125,46 @@ main{
 				.sold_main{
 					width: 100%;
 					height:265px;
-					ul{
-						overflow:hidden;
-						height:265px;
+					// .soldgo_box{
+						// width:950px;
+						// height:265px;
+						// margin:0 auto;
+						// position:relative;
+						z-index:2;
 						li{
+							width: 160px;
+	    					height: 265px;
+	    					margin:0 15px 0 15px;
+						}
+						.sold_go{
+							display: none;
+							overflow:hidden;
 							height:265px;
-							float:left;
-							text-align:center;
-							a{
+							li{
+								height:265px;
 								float:left;
+								text-align:center;
+								a{
+									float:left;
+								}
 							}
 						}
+						a{
+							display: block;
+							width: 17px;
+							height: 20px;
+							background: #fff;
+							z-index:5;
+						}
+						.prev{
+							background:url(imgs/pic_arrow_l.png)-3px 0 no-repeat;
+						}
+						.next{
+							background:url(imgs/pic_arrow_r.png)-3px 4px no-repeat;
+						}
 					}
-				}
+					
+				// }
 			}
 			.trends{
 				.trends_main{

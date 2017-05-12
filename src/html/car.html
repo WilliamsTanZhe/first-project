@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>购物车</title>
+	<link rel="stylesheet" href="../css/car.css">
+	<script  src ="../lib/require.js" data-main ="../js/car.js"></script>
+</head>
+<body>
+	<header>		
+		<div class="header">
+			<div class="container">
+				<div class="top_l">
+					<ul>
+						<li class="register"><a href="register.html">注册</a></li>
+						<li class="out" style="display: none"><a href="">退出</a></li>
+						<li class="login"><a href="login.html">登录</a></li>	
+						<li class="order_s"><a href="">订单查询</a></li>
+					</ul>
+				</div>
+				<div class="top_r">
+					<div class="hotline">客服热线 : 4000-250-630</div>
+					<div class="follow_us">
+						<em></em><span>关注我们</span>
+						<div class="foolow_uslinks">
+							<ul>
+								<li class="fou_sina"><a href="" class="fou_sinaa"><img src="../img/fou_sina.gif" alt=""><p>新浪微博</p></a></li>
+								<li class="fou_wx"><a href="" class="fou_wxa"><img src="../img/fou_wechat.gif" alt=""><p>美西微信</p></a></li>
+							</ul>
+						</div>
+					</div>
+					<div href="" class="cart">
+						<div class="cart_l">
+							<em></em>
+							购物袋 ( <span class="car_num">0</span> ) 
+						</div>
+						<div class="cart_r">
+							<span > ▼ </span>
+						</div>
+						<div class="cart_car">
+							<p class="empty" style="display: none">您的购物袋是空的</p>
+							<div class="cart_out" >
+								<div class="car_t"><strong>最新加入的商品</strong></div>
+								<div class="car_show">
+									
+								</div>
+								<div class="car_b">
+									<div class="to_l">
+										<span>商品总计 ： ￥  </span>
+										<span class="totalprice"></span>
+									</div>
+									<div class="to_r">
+										<a href="car.html" class="settlement">现在就结算</a>
+									</div>
+								</div>
+							</div>
+						</div>							
+					</div>	
+													
+				</div>
+			</div>			
+		</div>
+		<div class="header_top">
+			<div class="app">
+				<a href="" class="app_a">
+					<img src="../img/ewm_indexTop.png" alt="">
+				</a>
+				<span><img src="../img/ewm_txt.png" alt=""></span>
+			</div>
+			<div class="logo">
+				<a href="../index.html">
+					<img src="../img/logo.png" alt="">
+				</a>
+			</div>
+			<div class="search">
+				<div class="search_l">
+					<input type="text" placeholder="请输入你的关键词" >
+				</div>
+				<div class="search_in">
+					<a href="" class="search_a"></a>
+				</div>												
+			</div>
+		</div>
+	</header>
+	<main>
+		<div class="container">
+			<div class="car_top">
+				<img src="../img/process01.gif" alt="">
+			</div>
+			<!-- <article class="notLogged">
+				<section class="car_in">
+					<div class="car_em">
+						<div class="em_l"></div>
+						<div class="em_r">
+							<p>
+								购物车内暂时没有商品<span class=" logged">，<a href="login.html">登录	</a>
+								后将显示您之前加入的商品去</span>
+							</p>
+							<a href="">新品看看</a>	
+						</div>
+					</div>
+				</section>
+				<section class="like">
+					<div class="section_top">
+						<div class="section_line"></div>
+						<p class="section_top_p">
+							Guess You Like
+							<br>
+							猜你喜欢
+						</p>
+					</div>
+					<div class="like_main clearfix">
+						<ul class="like_go"><a href=""></a>
+							<li><a href=""><img src="../img/slod (1).jpg" alt="">
+									<p>Versace<br>范思哲</p>
+									<p>已加入购物袋</p></a>
+							</li>
+							<li><a href=""><img src="../img/slod (2).jpg" alt="">
+									<p>Versace<br>范思哲</p>
+									<p>尼龙 旅行包</p></a>
+							</li>
+							<li><a href=""><img src="../img/slod (3).jpg" alt="">
+									<p>Versace<br>范思哲</p>
+									<p>尼龙 旅行包</p></a>
+							</li>
+							<li><a href=""><img src="../img/slod (4).jpg" alt="">
+									<p>Versace<br>范思哲</p>
+									<p>已加入购物袋</p></a>
+							</li>
+							<li><a href=""><img src="../img/slod (5).jpg" alt="">
+									<p>Versace<br>范思哲</p>
+									<p>尼龙 旅行包</p></a>
+							</li>
+							<li><a href=""><img src="../img/slod (6).jpg" alt="">
+									<p>Versace<br>范思哲</p>
+									<p>已加入购物袋</p></a>
+							</li>
+							<li><a href=""><img src="../img/slod (7).jpg" alt="">
+									<p>Versace<br>范思哲</p>
+									<p>尼龙 旅行包</p></a>
+							</li>
+							<li><a href=""><img src="../img/slod (8).jpg" alt="">
+									<p>Versace<br>范思哲</p>
+									<p>全棉 男仕 单件西装</p></a>
+							</li>
+							<li><a href=""><img src="../img/slod (9).jpg" alt="">
+									<p>Versace<br>范思哲</p>
+									<p>全棉 男仕 单件西装</p></a>
+							</li>
+							<li><a href=""><img src="../img/slod (10).jpg" alt="">
+									<p>Versace<br>范思哲</p>
+									<p>全棉 男仕 单件西装</p></a>
+							</li>
+							<li><a href=""><img src="../img/slod (11).jpg" alt="">
+									<p>Versace<br>范思哲</p>
+									<p>全棉 男仕 单件西装</p></a>
+							</li>
+							<li><a href=""><img src="../img/slod (12).jpg" alt="">
+									<p>Versace<br>范思哲</p>
+									<p>全棉 男仕 单件西装</p></a>
+							</li>
+							<li><a href=""><img src="../img/slod (13).jpg" alt="">
+									<p>Versace<br>范思哲</p>
+									<p>全棉 男仕 单件西装</p></a>
+							</li>
+							<li><a href=""><img src="../img/slod (14).jpg" alt="">
+									<p>Versace<br>范思哲</p>
+									<p>全棉 男仕 单件西装</p></a>
+							</li>
+							<li><a href=""><img src="../img/slod (15).jpg" alt="">
+									<p>Versace<br>范思哲</p>
+									<p>全棉 男仕 单件西装</p></a>
+							</li>
+						</ul>
+					</div>					
+				</section>
+			</article> -->
+			<div class="logged">
+				<table>	
+					<thead>
+						<tr>
+							<th>商品图片</th>
+							<th>商品名称</th>
+							<th>数量</th>
+							<th>单价</th>
+							<th>操作</th>
+						</tr>
+					</thead>
+					<tbody>
+						<!-- <tr>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr> -->
+					</tbody>
+				</table>
+				<div class="car_buy_b">
+					<div class="buyb_l">
+						<a href="list.html">< 继续购物</a>
+					</div>
+					<div class="buyb_r">
+						<div class="br_t">
+							<span>总计（不含运费）：</span>
+							<strong class="car_totalprice"></strong>
+						</div>
+						<div class="br_b">
+							<a href="#" class="calculation"></a>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+		</div>
+		
+	</main>
+	<footer>
+		<div class="container">
+			<div class="footer_nav">
+				<ul>
+					<li><a href="">首页</a></li>
+					<li><a href="">关于美西</a></li>
+					<li><a href="">媒体报道</a></li>
+					<li><a href="">正品保证</a></li>
+					<li><a href="">业务合作</a></li>
+					<li><a href="">隐私声明</a></li>
+					<li><a href="">加入美西</a></li>
+					<li><a href="">网站地图</a></li>
+					<li><a href="">联系我们</a></li>
+				</ul>
+			</div>
+			<div class="footer_bu">
+				<p class="fbu_t">
+					<span>Copyright © 2008-2016 美西时尚-</span>
+					<a href="">高端时尚生活电商</a>
+				</p>
+				<p class="fbu_b">
+					<a href="http://www.miibeian.gov.cn/state/outPortal/loginPortal.action" target="_blank">沪ICP备09001221号</a>
+				</p>
+			</div>
+			<div class="footer_links">
+				<ul>
+					<li><a href=""></a></li>
+					<li><a href=""></a></li>
+					<li></li>
+					<li><a href=""></a></li>
+					<li><a href=""></a></li>
+					<li><a href="">MEICI · CLUB</a></li>
+				</ul>
+			</div>
+			<div class="footer_se">				
+					<a href="https://v.pinpaibao.com.cn/cert/not_found/?search_key=www.meici.com" class="footer_safe_l" target="_blank"></a>
+					<a href="https://www.sgs.gov.cn/lz/licenseLink.do?method=licenceView&entyId=dov73ne26zbqpz06h12ypxbndnhhch3lzn" class="footer_safe_r" target="_blank"></a>							
+			</div>
+		</div>
+	</footer>
+</body>
+</html>

@@ -1,0 +1,666 @@
+@charset "UTF-8";
+/*引入公共样式 包含头部 导航 尾部*/
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  margin: 0 auto;
+  width: 960px;
+}
+
+.clearfix:after {
+  display: block;
+  clear: both;
+  content: "";
+  visibility: hidden;
+  height: 0;
+}
+
+html, body {
+  width: 100%;
+}
+
+/*重置样式表*/
+/*==========样式重置===========*/
+body, h1, h2, h3, h4, h5, h6, p, a, input, img, ul, li, ol, dl, dt, dd {
+  padding: 0;
+  margin: 0;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+img {
+  display: block;
+  border: 0;
+}
+
+input {
+  outline: none;
+}
+
+header, footer, section, nav, main {
+  display: block;
+}
+
+body {
+  font-size: 12px;
+  font-family: "微软雅黑",Helvetica,sans-serif;
+  color: #6C6C6C;
+}
+
+a {
+  text-decoration: none;
+  font-size: 12px;
+  color: #6C6C6C;
+}
+
+header {
+  width: 100%;
+}
+
+header .header {
+  width: 100%;
+  background-color: #F4F4F4;
+}
+
+header .header .container {
+  width: 960px;
+  height: 36px;
+  color: #7A7A7A;
+  font-size: 12px;
+}
+
+header .header .container .top_l {
+  width: 300px;
+  float: left;
+}
+
+header .header .container .top_l ul {
+  width: 300px;
+}
+
+header .header .container .top_l ul li {
+  float: left;
+  display: inline-block;
+  height: 16px;
+  margin-top: 10px;
+}
+
+header .header .container .top_l ul li a {
+  color: #7A7A7A;
+  line-height: 14px;
+}
+
+header .header .container .top_l ul .register {
+  padding-right: 14px;
+}
+
+header .header .container .top_l ul .login {
+  border-left: 1px solid #ccc;
+  margin-left: 14px;
+  padding: 0 12px 0 14px;
+}
+
+header .header .container .top_r {
+  width: 384px;
+  float: right;
+  margin-top: 4px;
+  line-height: 18px;
+}
+
+header .header .container .top_r div {
+  float: left;
+}
+
+header .header .container .top_r .hotline {
+  padding-top: 4px;
+}
+
+header .header .container .top_r .follow_us {
+  padding-top: 4px;
+  margin-left: 23px;
+  position: relative;
+  width: 61px;
+  height: 22px;
+}
+
+header .header .container .top_r .follow_us em {
+  display: inline-block;
+  width: 13px;
+  height: 12px;
+  background: url(imgs/headico01.png) -3px -15px no-repeat;
+  left: 20px;
+}
+
+header .header .container .top_r .follow_us .foolow_uslinks {
+  position: absolute;
+  background-color: #fff;
+  left: -72px;
+  top: 31px;
+  display: none;
+}
+
+header .header .container .top_r .follow_us .foolow_uslinks ul {
+  border: 1px solid #ccc;
+  width: 132px;
+  height: 58px;
+}
+
+header .header .container .top_r .follow_us .foolow_uslinks ul li {
+  float: left;
+  width: 65px;
+  height: 58px;
+  text-align: center;
+}
+
+header .header .container .top_r .follow_us .foolow_uslinks ul li a {
+  display: inline-block;
+  float: left;
+  width: 65px;
+}
+
+header .header .container .top_r .follow_us .foolow_uslinks ul li a img {
+  margin: 6px auto;
+}
+
+header .header .container .top_r .follow_us .foolow_uslinks ul li p:hover {
+  color: #8E0C3A;
+}
+
+header .header .container .top_r .cart {
+  padding-top: 4px;
+  display: block;
+  width: 134px;
+  height: 31px;
+  margin-left: 26px;
+  box-sizing: border-box;
+  border: 1px solid #F4F4F4;
+  position: relative;
+  z-index: 6;
+  float: left;
+}
+
+header .header .container .top_r .cart .cart_l {
+  position: relative;
+  float: left;
+  padding-left: 46px;
+  cursor: pointer;
+  border-right: 1px solid white;
+}
+
+header .header .container .top_r .cart .cart_l em {
+  display: inline-block;
+  width: 20px;
+  height: 16px;
+  background: url(imgs/headico01.png) 0 -29px no-repeat;
+  left: 20px;
+  position: absolute;
+  left: 23px;
+}
+
+header .header .container .top_r .cart .cart_l .car_num {
+  color: #9A143B;
+}
+
+header .header .container .top_r .cart .cart_r {
+  border-left: 1px solid #afafaf;
+  height: 18px;
+  width: 18px;
+  float: left;
+  cursor: pointer;
+}
+
+header .header .container .top_r .cart .cart_car {
+  position: absolute;
+  z-index: 4;
+  top: 29px;
+  right: -1px;
+  width: 316px;
+  min-height: 78px;
+  max-height: 440px;
+  overflow: hidden;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  display: none;
+}
+
+header .header .container .top_r .cart .cart_car .empty {
+  text-align: center;
+  line-height: 78px;
+}
+
+header .header .container .top_r .cart .cart_car .cart_out {
+  width: 276px;
+  margin-left: 20px;
+  min-height: 78px;
+  max-height: 440px;
+}
+
+header .header .container .top_r .cart .cart_car .cart_out .car_t {
+  width: 276px;
+  height: 28px;
+  line-height: 28px;
+  text-indent: 1em;
+  text-weight: bold;
+}
+
+header .header .container .top_r .cart .cart_car .cart_out .car_show {
+  min-height: 78px;
+  max-height: 236px;
+  overflow: hidden;
+}
+
+header .header .container .top_r .cart .cart_car .cart_out .car_show .commodity .comImg {
+  width: 50px;
+  height: 60px;
+}
+
+header .header .container .top_r .cart .cart_car .cart_out .car_show .commodity div {
+  height: 78px;
+  width: 276px;
+  border-bottom: 1px solid #ddd;
+  position: relative;
+}
+
+header .header .container .top_r .cart .cart_car .cart_out .car_show .commodity div a {
+  float: left;
+  height: 78px;
+  width: 276px;
+}
+
+header .header .container .top_r .cart .cart_car .cart_out .car_show .commodity div a img {
+  float: left;
+  width: 50px;
+  height: 60px;
+}
+
+header .header .container .top_r .cart .cart_car .cart_out .car_show .commodity div a :hover {
+  color: #8E0C3A;
+}
+
+header .header .container .top_r .cart .cart_car .cart_out .car_show .commodity div span {
+  float: right;
+  font-size: 22px;
+  position: absolute;
+  right: 0;
+  top: 35%;
+  cursor: pointer;
+}
+
+header .header .container .top_r .cart .cart_car .cart_out .car_b {
+  width: 276px;
+  height: 44px;
+  color: #6C6C6C;
+}
+
+header .header .container .top_r .cart .cart_car .cart_out .car_b .to_l {
+  line-height: 44px;
+  float: left;
+  width: 184px;
+}
+
+header .header .container .top_r .cart .cart_car .cart_out .car_b .to_r {
+  float: right;
+  width: 92px;
+}
+
+header .header .container .top_r .cart .cart_car .cart_out .car_b .to_r .settlement {
+  display: block;
+  width: 82px;
+  height: 20px;
+  margin-top: 12px;
+  line-height: 20px;
+  text-align: center;
+  float: right;
+  background-color: #99183B;
+  color: #fff;
+}
+
+header .header .container .top_r .cart:hover {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-bottom-color: #fff;
+  height: 32px;
+}
+
+header .header_top {
+  width: 960px;
+  margin: 0 auto;
+  height: 100px;
+  color: #7a7a7a;
+}
+
+header .header_top .app {
+  width: 318px;
+  float: left;
+  padding: 15px 15px 0 0;
+}
+
+header .header_top .app a {
+  float: left;
+}
+
+header .header_top .app span {
+  float: left;
+  margin: 24px  0 0 10px;
+}
+
+header .header_top .logo {
+  float: left;
+  width: 460px;
+  padding-top: 28px;
+}
+
+header .header_top .search {
+  float: left;
+  width: 158px;
+  height: 26px;
+  border: 1px solid #afafaf;
+  margin-top: 40px;
+}
+
+header .header_top .search .search_l {
+  float: left;
+}
+
+header .header_top .search .search_l input {
+  width: 131px;
+  height: 24px;
+  line-height: 24px;
+  outline: none;
+  border: 0;
+}
+
+header .header_top .search .search_in {
+  float: left;
+}
+
+header .header_top .search .search_in a {
+  display: block;
+  width: 24px;
+  height: 24px;
+  background: url(imgs/headico01.png) -20px -44px no-repeat;
+}
+
+nav {
+  width: 100%;
+}
+
+nav .container .nav {
+  border-bottom: 1px solid #000;
+}
+
+nav .container .nav li {
+  float: left;
+  width: 96px;
+  position: relative;
+}
+
+nav .container .nav li a {
+  float: left;
+  width: 96px;
+  height: 33px;
+  font-size: 14px;
+  line-height: 33px;
+  text-align: center;
+  display: block;
+  color: #000;
+  line-height: 33px;
+}
+
+nav .container .nav li :hover {
+  background-color: #8E0C3A;
+  color: #fff;
+}
+
+nav .container .nav li em {
+  display: block;
+  width: 30px;
+  height: 16px;
+  background: url(imgs/headico01.png) 0 -126px no-repeat;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+footer {
+  width: 100%;
+}
+
+footer .container {
+  width: 960px;
+  margin-top: 28px;
+}
+
+footer .container .footer_nav {
+  width: 960px;
+  height: 22px;
+  background-color: #eee;
+}
+
+footer .container .footer_nav ul {
+  width: 810px;
+  margin: 3px auto;
+}
+
+footer .container .footer_nav ul li {
+  float: left;
+  line-height: 22px;
+}
+
+footer .container .footer_nav ul li a {
+  display: inline-block;
+  text-align: center;
+  width: 90px;
+  height: 22px;
+  float: left;
+  color: #7A7A7A;
+}
+
+footer .container .footer_nav ul li a:hover {
+  color: #fff;
+  background-color: #7A7A7A;
+}
+
+footer .container .footer_bu {
+  padding-top: 13px;
+  height: 43px;
+  text-align: center;
+}
+
+footer .container .footer_bu a {
+  color: #6C6C6C;
+}
+
+footer .container .footer_bu a:hover {
+  color: #8E0C3A;
+}
+
+footer .container .footer_links ul {
+  width: 480px;
+  height: 25px;
+  margin: 0 auto;
+}
+
+footer .container .footer_links ul li {
+  float: left;
+}
+
+footer .container .footer_links ul li a {
+  float: left;
+  display: block;
+}
+
+footer .container .footer_links ul :nth-child(1) a {
+  width: 21px;
+  height: 23px;
+  background: url(imgs/foot_pic.jpg) 0 -110px no-repeat;
+}
+
+footer .container .footer_links ul :nth-child(1) :hover {
+  background-position: 0 0;
+}
+
+footer .container .footer_links ul :nth-child(2) {
+  width: 140px;
+  height: 22px;
+}
+
+footer .container .footer_links ul :nth-child(2) a {
+  width: 94px;
+  height: 22px;
+  background: url(imgs/foot_pic.jpg) 0 -155px no-repeat;
+}
+
+footer .container .footer_links ul :nth-child(2) :hover {
+  background-position: 0 -45px;
+}
+
+footer .container .footer_links ul :nth-child(3) {
+  width: 66px;
+  height: 22px;
+  background: url(imgs/foot_pic.jpg) 0px -133px no-repeat;
+}
+
+footer .container .footer_links ul :nth-child(4) a {
+  width: 73px;
+  height: 22px;
+  background: url(imgs/foot_pic.jpg) -182px -180px no-repeat;
+}
+
+footer .container .footer_links ul :nth-child(4) :hover {
+  background-position: -182px  -70px;
+}
+
+footer .container .footer_links ul :nth-child(5) a {
+  width: 90px;
+  height: 22px;
+  background: url(imgs/foot_pic.jpg) -66px -110px no-repeat;
+}
+
+footer .container .footer_links ul :nth-child(5) :hover {
+  background-position: -66px 0;
+}
+
+footer .container .footer_links ul :nth-child(6) {
+  width: 85px;
+  height: 22px;
+  background: #5a5a5a;
+}
+
+footer .container .footer_links ul :nth-child(6) a {
+  display: block;
+  width: 85px;
+  height: 22px;
+  text-align: center;
+  line-height: 22px;
+  color: #fff;
+}
+
+footer .container .footer_se {
+  height: 38px;
+  width: 135px;
+  margin: 0 auto;
+}
+
+footer .container .footer_se a {
+  float: left;
+  display: block;
+}
+
+footer .container .footer_se .footer_safe_l {
+  width: 83px;
+  height: 30px;
+  background: url(imgs/headico01.png) -45px 0 no-repeat;
+}
+
+footer .container .footer_se .footer_safe_r {
+  width: 47px;
+  height: 35px;
+  background: url(imgs/headico01.png) -53px -44px no-repeat;
+}
+
+main {
+  width: 100%;
+}
+
+main .container {
+  padding-top: 20px;
+}
+
+main .container .login_main {
+  width: 960px;
+  height: 489px;
+  padding-top: 28px;
+  background: url(imgs/main.jpg);
+}
+
+main .container .login_main .login_logo {
+  width: 352px;
+  height: 123px;
+  margin-left: 66px;
+  background: url(imgs/login_bg.png);
+}
+
+main .container .login_main .input {
+  margin: 22px 0 0 106px;
+}
+
+main .container .login_main .input .input_t input {
+  width: 202px;
+  height: 18px;
+  border: 1px solid #ccc;
+  outline: none;
+  padding: 0 0 0 2px;
+}
+
+main .container .login_main .input .input_t div {
+  width: 856px;
+  height: 40px;
+}
+
+main .container .login_main .input .input_t div .active {
+  border: 1px solid #8E0C3A;
+}
+
+main .container .login_main .input .input_b {
+  margin-left: 70px;
+}
+
+main .container .login_main .input .input_b div {
+  width: 204px;
+}
+
+main .container .login_main .input .input_b .input_in {
+  height: 20px;
+  margin-bottom: 22px;
+}
+
+main .container .login_main .input .input_b .input_in .float_l {
+  float: left;
+}
+
+main .container .login_main .input .input_b .input_in .float_r {
+  float: right;
+}
+
+main .container .login_main .input .input_b .submit .submit_btn {
+  width: 204px;
+  height: 30px;
+  background-color: #8E0C3A;
+  border: 0;
+  outline: none;
+  color: #fff;
+  cursor: pointer;
+}
+
+main .container .login_main .input .input_b .output {
+  width: 204px;
+  height: 28px;
+  line-height: 28px;
+  color: #8E0C3A;
+}

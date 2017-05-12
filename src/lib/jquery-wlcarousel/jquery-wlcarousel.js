@@ -9,6 +9,8 @@
 	轮播类型: fade:淡入淡出, vertial:垂直滚动, horizontal:水平滚动,
 			  show:幻灯片
 	默认显示第几张图片
+
+	设置 如果显示是多个li在可视框 同时轮播 more:true,
  */
 ; (function($){
 	$.fn.wlcarousel=function(options){
@@ -21,10 +23,11 @@
 			// 滚动间隔时间
 			duration:3000,
 
-			// 当前索引值（默认0）
+			// 当前索引值（默认0）img
 			index:0,
 			auto:true,// 移入移出是否自动轮播
-			btns:true //是否显示左右按钮
+			btns:true, //是否显示左右按钮
+			more:false,
 		}
 
 		// 遍历  实现多个调用
@@ -36,7 +39,8 @@
 			// 接受外部this
 			var that=$(this);
 			var timer;
-			var $ul;			
+			var $ul;
+			var len;			
 			var $smallList;//小图集合
 			init();
 
@@ -94,7 +98,7 @@
 					// 克隆第一张图片
 					var newli=$ul.children().eq(0).clone(true);
 					$ul.append(newli);
-
+					
 					// 添加imgs
 					opt.imgs.push(opt.imgs[0]);
 					
@@ -195,13 +199,20 @@
 						$smallList.eq(idx).animate({opacity:1}).
 						siblings().animate({opacity:0.5});
 					});
-				}				
+				}	
+
+				
 			}
 
 			// 设定回应的 轮播函数的定时函数
 			function setIner(setb){
 				timer=setInterval(function(){
-					opt.index++;
+					// if (opt.goto) {
+					// 	opt.index+=len;
+					// }else{
+						opt.index++;
+					// }
+					
 					setb();//对应轮播类型函数执行					
 				},opt.duration);
 			}
@@ -225,6 +236,7 @@
 
 			// 无缝滚动
 			function seamless(){
+				
 				if (opt.index>opt.imgs.length-1) {
 					opt.index=1;
 					$ul.css({left:0});//无缝滚动 关键  显示添加的最后一张时，重置left
@@ -232,6 +244,7 @@
 					opt.index=opt.imgs.length-2;
 					$ul.css({left:-(opt.index+1)*opt.width});//重置left
 				}
+			
 				
 				$ul.animate({left:-opt.index*opt.width});
 				smallOngo();
@@ -239,7 +252,9 @@
 
 			// 垂直轮播函数
 			function vertial(){
+
 				optIndex();
+
 				$ul.animate({top:-opt.index*opt.height});
 				smallOngo();
 			}
@@ -263,6 +278,17 @@
 
 			//水平移动
 			function horizontal(){
+				//多个li在可视框 同时轮播
+				if (opt.more) {
+					// 可视内的有多少个li
+					len=$ul.parent().width()/opt.width;
+					// console.log(len);
+					if (opt.index>len) {
+						opt.index=0;
+					}else if(opt.index<0){
+						opt.index=len;
+					}
+				}
 				optIndex();
 				$ul.animate({left:-opt.index*opt.width});
 
