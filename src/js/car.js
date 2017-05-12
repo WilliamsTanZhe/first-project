@@ -33,13 +33,22 @@ requirejs(['config'],function(){//加载config.js后
 				$('.car_num').html(car_num);	
 			}
 
-			if ($.cookie('carlist')&&$.cookie('carlist')!='[]') {
-				setCarHtml();
-			}
+			//如果查找到购物车有物品
+			function loggedShow(){
+				if ($.cookie('carlist')&&$.cookie('carlist')!='[]') {
+					setCarHtml();
+					$('.logged').show();
+				}else{
+					$('.notLogged').show();
+					$('.logged').hide();
+				}
+			}	
+			loggedShow();		
+
 			//删除商品
 			$('.btn_close').click(function(){
+				var goods=JSON.parse($.cookie('carlist'));
 				var $goodstx=$(this).parent().parent();
-				console.log($goodstx)
 				var $guid=$goodstx.attr('guid');
 				// 移除节点
 				$goodstx.remove();
@@ -53,13 +62,18 @@ requirejs(['config'],function(){//加载config.js后
 					}
 				}
 				// 重新写入cookie
-				setCookie('carlist',JSON.stringify(goods));
+				$.cookie('carlist',JSON.stringify(goods),{path:'/'});
 
-				setCarHtml();
+				location.reload();
 
-				carContent();//top的购物车
+				// setCarHtml();
+
+				// loggedShow();
+
+				// carContent();//top的购物车
 			});
 
+			//top购物车点击删除
 			$('.car_show').click(function(e){
 				console.log(e.target)
 				var target=e.target;
@@ -80,12 +94,14 @@ requirejs(['config'],function(){//加载config.js后
 						}
 					}
 					// 重新写入cookie
-					setCookie('carlist',JSON.stringify(goods));
+					$.cookie('carlist',JSON.stringify(goods),{path:'/'});
 
-					if ($.cookie('carlist')=='[]') {		
-						$('.car_num').html(0);
-					}
+					// if ($.cookie('carlist')=='[]') {		
+					// 	$('.car_num').html(0);
+					// }
 					setCarHtml();
+
+					loggedShow();
 
 					carContent();
 				}
@@ -96,8 +112,9 @@ requirejs(['config'],function(){//加载config.js后
 				window.location.href = '../html/car.html';
 			});
 
+			//购物车空时  登录后未登录提示隐藏
 			if ($.cookie('meixi_account')) {
-				$('.logged').hide();
+				$('.logged_in').hide();
 			}
 			
 		});

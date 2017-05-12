@@ -7,6 +7,11 @@ requirejs(['config'],function(){//加载config.js后
 			$('.cart_l').click(function(){
 				window.location.href = 'html/car.html';
 			})
+
+			//跳转list页面
+			$('.nav li').click(function(){
+				window.location.href = 'html/list.html';
+			})
 			
 			// 轮播图 无缝滚动
 			$('.banner').wlcarousel({

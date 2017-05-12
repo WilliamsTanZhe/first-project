@@ -252,6 +252,7 @@ header .header .container .top_r .cart .cart_car .cart_out .car_show {
   min-height: 78px;
   max-height: 236px;
   overflow: hidden;
+  overflow-y: auto;
 }
 
 header .header .container .top_r .cart .cart_car .cart_out .car_show .commodity .comImg {
@@ -286,7 +287,7 @@ header .header .container .top_r .cart .cart_car .cart_out .car_show .commodity 
   float: right;
   font-size: 22px;
   position: absolute;
-  right: 0;
+  right: 26px;
   top: 35%;
   cursor: pointer;
 }

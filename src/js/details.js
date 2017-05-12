@@ -7,6 +7,7 @@ requirejs(['config'],function(){//加载config.js后
 				window.location.href = '../html/car.html';
 			});
 
+			//添加购物车
 			$('.take').on('click',function(e){
 				
 				var $goodImg=$('.simgFirst').attr('src');
@@ -28,7 +29,7 @@ requirejs(['config'],function(){//加载config.js后
 					$('.cart_car').show();			
 				});
 
-			// 保存添加商品的信息 如果已有商品获取/读取cookie值
+				// 保存添加商品的信息 如果已有商品获取/读取cookie值
 				var goodslist=$.cookie('carlist');
 				goodslist=goodslist? JSON.parse(goodslist): [];
 				// console.log(goodslist);
@@ -65,6 +66,12 @@ requirejs(['config'],function(){//加载config.js后
 				$.cookie('carlist',JSON.stringify(goodslist),{path:'/'});
 				// setCookie();
 			});
+
+			$(document).scroll(function(){
+				if ($(document).scrollTop()>300) {
+					$('.content').load('details_content.html');
+				}
+			})
 			
 			// 懒加载                 当图片距离窗口180px时加载
 			$(".content img").lazyload({ threshold :180});
@@ -81,18 +88,7 @@ requirejs(['config'],function(){//加载config.js后
 					src:$imgSrc,
 					'data-big':$imgSrc
 				});
-			})
-			
-			// $(window).scroll(function(){
-				
-			// 	console.log($('.content_title').offset());
-			// 	if ($(document).scrollTop()>300) {
-
-			// 		$('.content').load('details_content.html');
-			// 	}
-			// })
-			
-
+			});
 
 		});
 	});

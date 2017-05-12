@@ -5,7 +5,7 @@ requirejs.config({
 		"jquery" : "../lib/jquery-3.1.1",
         "cookies" : "../lib/jquery-cookies/jquery.cookie",
 		"wlcarousel" : "../lib/jquery-wlcarousel/jquery-wlcarousel",
-        "lazyload" : "../lib/jquery.lazyload.min",
+        "lazyload" : "../lib/jquery-lazyload/jquery.lazyload.min",
         "wlzoom" : "../lib/jquery-wlzoom/jquery-wlzoom",
         "top" : "top",
 

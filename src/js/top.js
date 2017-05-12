@@ -35,18 +35,18 @@
 	carContent();
 	
 	// 购物车显示商品 类型数量
-	if ($.cookie('carlist')&&$.cookie('carlist')!='[]') {
-		var car_num=0;
-		var goods=JSON.parse($.cookie('carlist'));
-		goods.map(function(item){
-			if (item.guid) {
-				car_num++;
-			}
-		});
-		if(goods[0].guid){
-			$('.car_num').html(car_num);
-		}
-	}
+	// if ($.cookie('carlist')&&$.cookie('carlist')!='[]') {
+	// 	var car_num=0;
+	// 	var goods=JSON.parse($.cookie('carlist'));
+	// 	goods.map(function(item){
+	// 		if (item.guid) {
+	// 			car_num++;
+	// 		}
+	// 	});
+	// 	if(goods[0].guid){
+	// 		$('.car_num').html(car_num);
+	// 	}
+	// }
 	
 
 	function carContent(){
@@ -127,8 +127,7 @@
 
 	// 删除个别商品
 	$('.car_show').click(function(e){
-		e=e||window.event;
-		var target=e.target||e.srcElement;
+		var target=e.target;
 
 		if (target.tagName.toLowerCase()==='span') {
 			var goods=JSON.parse($.cookie('carlist'));
@@ -145,7 +144,8 @@
 				}
 			}
 			// 重新写入cookie
-			setCookie('carlist',JSON.stringify(goods));
+			// setCookie('carlist',JSON.stringify(goods));
+			$.cookie('carlist',JSON.stringify(goods),{path:'/'});
 
 			if ($.cookie('carlist')=='[]') {		
 				$('.car_num').html(0);
