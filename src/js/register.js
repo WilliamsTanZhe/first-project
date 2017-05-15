@@ -78,6 +78,10 @@ requirejs(['config'],function(){//加载config.js后
 						var $obj = eval('(' + response + ')');
 						if($obj.state){
 							alert('注册成功！');
+							$.cookie('meixi_account',  $('#register_pohne').val() 
+			          		,{ path: '/' });
+							location.reload();//先刷新页面  确保index页面能获取用户名
+			            	window.location.href = '../index.html';
 						} else {
 							alert($obj.message);
 						}

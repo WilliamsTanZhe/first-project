@@ -45,6 +45,9 @@ requirejs(['config'],function(){
 				.css({width:50,height:60,position:'fixed',left:$oLeft,top:$oTop,zIndex:1000,borderRadius:'50%'});
 				$good.appendTo('body');
 
+				var interTop=$oTop-($oTop-$moveTop)/3*2;
+				var interLeft=$oLeft+($('.cart_l').offset().left-$oLeft)/3;				
+
 				// 飞入购物车
 				$good.animate({left:$('.cart_l').offset().left,top:$moveTop,
 				width:25,height:30},function(){
@@ -100,11 +103,17 @@ requirejs(['config'],function(){
 					$(this).next().show();
 				});
 			}
-			// $lla.click(function(e){
-			// 	e.preventDefault();
-			// 	var $idx=$(this).index();
-			// 	$ul.hide().eq($idx).show();
-			// })
+
+			// 折线飞入
+			// $good.animate({left:interLeft,top:interTop,width:35,height:40},function(){
+			// 	$good.animate({left:$('.cart_l').offset().left,top:$moveTop,
+			// 	width:20,height:25},function(){
+			// 		// 飞入后隐藏
+			// 		$good.hide();
+			// 		// carContent();	
+			// 		$('.cart_car').show();	
+			// 	});			
+			// });
 
 		});
 	});
